@@ -38,6 +38,7 @@
   "resources": [
     {"id":{"name":"Player Object Notes","path":"notes/Player Object Notes/Player Object Notes.yy",},},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
+    {"id":{"name":"scr_animation_control","path":"scripts/scr_animation_control/scr_animation_control.yy",},},
     {"id":{"name":"scr_move","path":"scripts/scr_move/scr_move.yy",},},
     {"id":{"name":"spr_player_walk","path":"sprites/spr_player_walk/spr_player_walk.yy",},},
     {"id":{"name":"spr_player_dash","path":"sprites/spr_player_dash/spr_player_dash.yy",},},

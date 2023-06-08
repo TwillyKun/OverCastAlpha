@@ -23,12 +23,10 @@ switch (state) {
 		}
 	
 		if keyboard_check_pressed(vk_space) {
-			image_index = 0;
 			state = "DASH";
 		}
 		
 		if keyboard_check_pressed(ord("Z")) {
-			image_index = 0;
 			state = "ATTACK ONE";
 		}
 		#endregion
@@ -36,8 +34,7 @@ switch (state) {
 	
 	case "DASH":
 		#region DASH STATE
-		sprite_index = spr_player_dash;
-		image_speed = 0.5;
+		set_state_sprite(spr_player_dash, 0.6, 0)
 	
 		if image_xscale == 1{
 			scr_move (6,0);
@@ -50,8 +47,17 @@ switch (state) {
 	
 	case "ATTACK ONE":
 		#region ATTACK ONE STATE
-		sprite_index = spr_player_combo_1;
-		image_speed = 0.5;
+		set_state_sprite(spr_player_combo_1, 0.5, 0)
+		
+		if keyboard_check_pressed(ord("Z")) and animation_hit_frame_range(2, 5) {
+			state = "ATTACK TWO";
+		}
+		#endregion
+	break;
+	
+	case "ATTACK TWO":
+		#region ATTACK TWO STATE
+		set_state_sprite(spr_player_combo_2, 0.5, 0)
 		#endregion
 	break;
 	
