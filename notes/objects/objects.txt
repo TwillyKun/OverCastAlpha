@@ -1,0 +1,3 @@
+obj_input is inherited by any object that allows user input
+obj_player is the object that the user will control during segments such as combat
+obj_wall is to be used to create level bounderies and most object should have collision with it

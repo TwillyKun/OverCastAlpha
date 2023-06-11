@@ -1,0 +1,3 @@
+scr_input is used with obj_input for controlling what objects will have player input
+scr_move will have all functions revolving around movement and collision
+scr_animation_control will have all functions involving sprite management

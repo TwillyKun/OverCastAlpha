@@ -1,14 +1,15 @@
 /*
-Function for changing player position after checking collision with a wall object
+Function for changing object position after checking collision with a wall object
 
-argument0 = xspeed
-argument1 = yspeed
+xspeed = the speed that the object moves on the x axis
+yspeed = the speed that the object moves on the y axis
 */
-function scr_move(argument0, argument1){
-	if !place_meeting(x+argument0, y, obj_wall){
-		x+=argument0;
+
+function scr_move(xspeed, yspeed){
+	if !place_meeting(x+xspeed, y, obj_wall){
+		x+=xspeed;
 	}
-	if !place_meeting(x, y+argument1, obj_wall){
-		y+=argument1;
+	if !place_meeting(x, y+yspeed, obj_wall){
+		y+=yspeed;
 	}
 }
